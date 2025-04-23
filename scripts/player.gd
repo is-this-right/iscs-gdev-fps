@@ -15,6 +15,7 @@ const JUMP_VELOCITY = 4.5
 @onready var gun_direction = $"Gun pivot"
 @onready var cameraRay = $CameraController/Camera3D/RayCast3D
 @onready var distantTarget = $CameraController/Camera3D/pointHereInstead
+@onready var bullet_out_here = $"Gun pivot/bulletHere"
 
 var _mouse_input : bool = true
 var _rotation_input : float
@@ -87,7 +88,7 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_pressed("shoot"):
 		instance = bullet.instantiate()
-		instance.position = gun_direction.global_position
+		instance.position = bullet_out_here.global_position
 		instance.transform.basis = gun_direction.global_transform.basis
 		get_parent().add_child(instance)
 
