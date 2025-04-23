@@ -1,9 +1,10 @@
 extends Node3D
 
-const SPEED = 20.0
+var SPEED = 20.0
 
 @onready var mesh_instance_3d: MeshInstance3D = $MeshInstance3D
 @onready var ray_cast_3d: RayCast3D = $RayCast3D
+@onready var explosionAnimation = $AnimatedSprite3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,4 +18,11 @@ func _process(delta: float) -> void:
 		var collider = ray_cast_3d.get_collider()
 		if collider.is_in_group("destructible"):
 			collider.health -= 1
-		queue_free()
+		mesh_instance_3d.visible = false
+		ray_cast_3d.enabled = false
+		SPEED = 0
+		explosionAnimation.play()
+
+
+func _on_animated_sprite_3d_animation_finished() -> void:
+	queue_free() # Replace with function body.

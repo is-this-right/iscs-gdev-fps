@@ -4,3 +4,5 @@ res://scenes/player.tscn
 res://scripts/box.gd
 res://scenes/box.tscn
 res://scripts/player.gd
+res://scripts/bullet.gd
+res://scenes/bullet.tscn

@@ -1,13 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1745419215
+::res://::1745419268
 icon.svg::CompressedTexture2D/CompressedTexture2D::257524108919954754::1745378128::1745399380::1::::<><><>0<>0<>2895c43a792f0bd565e49020fb32ff09<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://assets/::1745414633
+::res://assets/::1745419845
 Chevrolet_Camaro_SS_High.obj::Mesh/Mesh::5824317112609258011::1745411947::1745411992::1::::<><><>0<>0<>33da30fd338603964dec561a7ccae999<>res://.godot/imported/Chevrolet_Camaro_SS_High.obj-34a3df4033750252dbbb284ecdaa67fd.mesh<*>res://.godot/imported/Chevrolet_Camaro_SS_High.obj-34a3df4033750252dbbb284ecdaa67fd.mesh::
 Chevrolet_Camaro_SS_Low.obj::Mesh/Mesh::4658843560944905242::1745411947::1745411992::1::::<><><>0<>0<>f239eb23ce4f98a008a81a5d5fadd1e9<>res://.godot/imported/Chevrolet_Camaro_SS_Low.obj-92ed9d6262371a0f6c449181b7bbdb4c.mesh<*>res://.godot/imported/Chevrolet_Camaro_SS_Low.obj-92ed9d6262371a0f6c449181b7bbdb4c.mesh::
 circle-01.png::CompressedTexture2D/CompressedTexture2D::7723694118358699673::1745404721::1745408328::1::::<><><>0<>0<>d358dcfcd67e634e1e6fdf3865a20d75<>res://.godot/imported/circle-01.png-48153377d65b485a0fb1f62b7fc6f1ca.ctex::
 cocacola.jpg::CompressedTexture2D/CompressedTexture2D::1816815707158600344::1745413902::1745413914::1::::<><><>0<>0<>a74a16653273b74b563540ce67567b80<>res://.godot/imported/cocacola.jpg-825ffd8e1377d7a85e6c52594671b243.s3tc.ctex::
 Low-Poly-Racing-Car.obj::Mesh/Mesh::6096049197858675892::1745411933::1745411992::1::::<><><>0<>0<>a8e28550bee65a3ef3c16f5e6515f54a<>res://.godot/imported/Low-Poly-Racing-Car.obj-cd9c1cd0becf24eda89fc72c10378601.mesh<*>res://.godot/imported/Low-Poly-Racing-Car.obj-cd9c1cd0becf24eda89fc72c10378601.mesh::
 PG2.79.obj::Mesh/Mesh::419967233209638634::1745412857::1745412858::1::::<><><>0<>0<>028091eb4144789460ef5e2a33423225<>res://.godot/imported/PG2.79.obj-d7e1daed0eb608ca404cecd0538b7531.mesh<*>res://.godot/imported/PG2.79.obj-d7e1daed0eb608ca404cecd0538b7531.mesh::
+pngegg.png::CompressedTexture2D::8888518041137876021::1745419844::1745419860::1::::<><><>0<>0<>49107758e88bffbc1d4a666c60ddf05b<>res://.godot/imported/pngegg.png-4c48951bbd5a1bf0cccfcc1867cc2942.s3tc.ctex::
 scattered-clouds-blue-sky.jpg::CompressedTexture2D/CompressedTexture2D::3998970388291036693::1745414629::1745414633::1::::<><><>0<>0<>701c5378d5fe517a1895a6afe8566376<>res://.godot/imported/scattered-clouds-blue-sky.jpg-55ce9e77e4fa9e2e0a1607240dc22e73.s3tc.ctex::
 Texturelabs_Concrete_149M.jpg::CompressedTexture2D/CompressedTexture2D::1997678617132859526::1745408928::1745409007::1::::<><><>0<>0<>8afec069410061fbdaf3f5b307724a8d<>res://.godot/imported/Texturelabs_Concrete_149M.jpg-450fed00e187416f2e83fc042d0a9927.s3tc.ctex::
 uploads_files_2792345_Koenigsegg.obj::Mesh/Mesh::3735643921099209648::1745411963::1745411995::1::::<><><>0<>0<>f8f70ee9e38ac95fe241824a59564878<>res://.godot/imported/uploads_files_2792345_Koenigsegg.obj-8636a038de6fc8d428cc32e95f3837cf.mesh<*>res://.godot/imported/uploads_files_2792345_Koenigsegg.obj-8636a038de6fc8d428cc32e95f3837cf.mesh::
@@ -49,13 +50,13 @@ Chevrolet_Camaro_SS_C_002.png::CompressedTexture2D/CompressedTexture2D::32923960
 Chevrolet_Camaro_SS_C_003.png::CompressedTexture2D/CompressedTexture2D::5891040209181239267::1745411947::1745411990::1::::<><><>0<>0<>4c2ee3634c214b7d310404aab00eff20<>res://.godot/imported/Chevrolet_Camaro_SS_C_003.png-fd15eac3520167f99c91eaff94aac927.ctex::
 Chevrolet_Camaro_SS_C_004.png::CompressedTexture2D/CompressedTexture2D::4200487168072127335::1745411947::1745411990::1::::<><><>0<>0<>8c58d27f2caf02692a3d82498bb919ed<>res://.godot/imported/Chevrolet_Camaro_SS_C_004.png-7811773189b223e52ae18d0fd8b594b0.ctex::
 Chevrolet_Camaro_SS_C_005.png::CompressedTexture2D/CompressedTexture2D::2575756256998180172::1745411947::1745411990::1::::<><><>0<>0<>fc86beae281c0236fb2c030c5d22f76a<>res://.godot/imported/Chevrolet_Camaro_SS_C_005.png-3786062ce60c6f71d6b6081b78a607cf.ctex::
-::res://scenes/::1745419134
-box.tscn::PackedScene::6713077959040636935::1745419036::0::1::::<><><>0<>0<><>::uid://c13s1l0wxbams::::res://scripts/box.gd
+::res://scenes/::1745419484
+box.tscn::PackedScene::6713077959040636935::1745419484::0::1::::<><><>0<>0<><>::uid://c13s1l0wxbams::::res://scripts/box.gd
 bullet.tscn::PackedScene/PackedScene::2812924297637238544::1745408411::0::1::::<><><>0<>0<><>::uid://881nani4rn63::::res://scripts/bullet.gd
-game.tscn::PackedScene::252003647314032955::1745419134::0::1::::<><><>0<>0<><>::uid://bw8eptq0a5ubt::::res://assets/scattered-clouds-blue-sky.jpg<>uid://s7ck66806sfg::::res://scenes/player.tscn<>uid://dibod4ohnuix2::::res://assets/circle-01.png<>uid://c2v4obwd6qajf::::res://scenes/box.tscn<>uid://dwpcecq4vm74b::::res://scenes/map.tscn
-map.tscn::PackedScene::8734510985697835691::1745419134::0::1::::<><><>0<>0<><>::uid://3pxqfb2yonfy::::res://assets/Texturelabs_Concrete_149M.jpg<>uid://x76tauqkpa5o::::res://assets/obj/Residential Buildings 001.obj<>uid://dfr7xohplxv17::::res://assets/obj/Residential Buildings 002.obj<>uid://4k03xl622wa1::::res://assets/obj/Residential Buildings 005.obj<>uid://k6m483d3nvhx::::res://assets/obj/Residential Buildings 010.obj<>uid://c13s1l0wxbams::::res://scripts/box.gd<>uid://b7m1qcsjhe4o1::::res://assets/Chevrolet_Camaro_SS_Low.obj<>uid://bthtrldfuyots::::res://assets/uploads_files_2792345_Koenigsegg.obj<>uid://f8o2fu3mg8o1::::res://assets/PG2.79.obj
-player.tscn::PackedScene::1329600243185885792::1745419134::0::1::::<><><>0<>0<><>::uid://doqx35t6upruw::::res://scripts/player.gd<>uid://05cxo1sxgwoe::::res://assets/cocacola.jpg
-::res://scripts/::1745415469
-box.gd::GDScript/GDScript::6656693833007358242::1745404721::0::1::::<>StaticBody3D<><>0<>0<><>::
+game.tscn::PackedScene::252003647314032955::1745419484::0::1::::<><><>0<>0<><>::uid://bw8eptq0a5ubt::::res://assets/scattered-clouds-blue-sky.jpg<>uid://s7ck66806sfg::::res://scenes/player.tscn<>uid://dibod4ohnuix2::::res://assets/circle-01.png<>uid://dwpcecq4vm74b::::res://scenes/map.tscn
+map.tscn::PackedScene::8734510985697835691::1745419484::0::1::::<><><>0<>0<><>::uid://3pxqfb2yonfy::::res://assets/Texturelabs_Concrete_149M.jpg<>uid://x76tauqkpa5o::::res://assets/obj/Residential Buildings 001.obj<>uid://dfr7xohplxv17::::res://assets/obj/Residential Buildings 002.obj<>uid://4k03xl622wa1::::res://assets/obj/Residential Buildings 005.obj<>uid://k6m483d3nvhx::::res://assets/obj/Residential Buildings 010.obj<>uid://c13s1l0wxbams::::res://scripts/box.gd<>uid://b7m1qcsjhe4o1::::res://assets/Chevrolet_Camaro_SS_Low.obj<>uid://bthtrldfuyots::::res://assets/uploads_files_2792345_Koenigsegg.obj<>uid://f8o2fu3mg8o1::::res://assets/PG2.79.obj
+player.tscn::PackedScene::1329600243185885792::1745419484::0::1::::<><><>0<>0<><>::uid://doqx35t6upruw::::res://scripts/player.gd<>uid://05cxo1sxgwoe::::res://assets/cocacola.jpg
+::res://scripts/::1745419484
+box.gd::GDScript::6656693833007358242::1745419375::0::1::::<>StaticBody3D<><>0<>0<><>::
 bullet.gd::GDScript/GDScript::2385958183557111814::1745404721::0::1::::<>Node3D<><>0<>0<><>::
-player.gd::GDScript/GDScript::8176384005627301722::1745415469::0::1::::<>CharacterBody3D<><>0<>0<><>::
+player.gd::GDScript::8176384005627301722::1745419484::0::1::::<>CharacterBody3D<><>0<>0<><>::
