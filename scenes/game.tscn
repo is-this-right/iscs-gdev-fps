@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ducp0rx0t5sx"]
+[gd_scene load_steps=12 format=3 uid="uid://ducp0rx0t5sx"]
 
 [ext_resource type="PackedScene" uid="uid://s7ck66806sfg" path="res://scenes/player.tscn" id="1_lrgi8"]
 
@@ -22,6 +22,15 @@ size = Vector2(50, 50)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ev0t2"]
 points = PackedVector3Array(25.3919, 0.396748, 25.3919, -25.3919, -0.396748, -25.3919, -25.3919, 0.396748, -25.3919, 25.3919, -0.396748, -25.3919, -25.3919, -0.396748, 25.3919, -25.3919, 0.396748, 25.3919, 25.3919, 0.396748, -25.3919, 25.3919, -0.396748, 25.3919)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p3gqg"]
+size = Vector3(10, 10, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yq1ni"]
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jboae"]
+points = PackedVector3Array(-5.07837, -5.07738, -0.579365, 4.78818, 4.78724, 0.5, 4.78818, -4.78724, 0.5, 5.07837, 5.07738, -0.579365, -4.78818, 4.78724, 0.5, 5.07837, -5.07738, -0.579365, -5.07837, 5.07738, -0.579365, -4.78818, -4.78724, 0.5)
 
 [node name="game" type="Node3D"]
 
@@ -53,5 +62,16 @@ mesh = SubResource("PlaneMesh_28571")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_ev0t2")
 
-[node name="player" parent="." instance=ExtResource("1_lrgi8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23244, 2.62753)
+[node name="Wall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.11646, 4.98868, 9.0278)
+mesh = SubResource("BoxMesh_p3gqg")
+skeleton = NodePath("../CharacterBody3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_yq1ni")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_jboae")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_lrgi8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75854, 2.91644)
