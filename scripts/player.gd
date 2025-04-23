@@ -12,7 +12,13 @@ const JUMP_VELOCITY = 4.5
 @export var TILT_UPPER_LIMIT := deg_to_rad (90.0)
 @export var CAMERA_CONTROLLER : Camera3D
 @export var sensitivity = 0.5
-@onready var gun_direction = $"Gun pivot/RayCast3D"
+@onready var gun_direction = $"Gun pivot"
+@onready var cameraRay = $CameraController/over_the_shoulder/RayCast3D
+@onready var distantTarget = $CameraController/over_the_shoulder/pointHereInstead
+@onready var over_the_shoulder: Camera3D = $CameraController/over_the_shoulder
+@onready var top: Camera3D = $CameraController/top
+@onready var bullet_out_here = $"Gun pivot/bulletHere"
+@onready var shoot_cd: Timer = $shoot_cd
 
 var _mouse_input : bool = true
 var _rotation_input : float
@@ -21,6 +27,8 @@ var _mouse_rotation : Vector3
 
 var bullet = load("res://scenes/bullet.tscn")
 var instance
+
+var aim_adjust = true
 
 func _input(event):
 	if event.is_action_pressed("exit"):
@@ -35,7 +43,17 @@ func _input(event):
 			camera_ray.visible = false
 		else:
 			camera_ray.visible = true
-		
+	if event.is_action_pressed("aim_adjust"):
+		if aim_adjust:
+			aim_adjust = false
+		else:
+			aim_adjust = true
+		print(aim_adjust)
+	if event.is_action_pressed("change_camera"):	
+		if over_the_shoulder.current:
+			top.make_current()
+		else:
+			over_the_shoulder.make_current()
 		
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -84,9 +102,24 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		
 	if Input.is_action_pressed("shoot"):
-		instance = bullet.instantiate()
-		instance.position = gun_direction.global_position
-		instance.transform.basis = gun_direction.global_transform.basis
-		get_parent().add_child(instance)
+		if (shoot_cd.is_stopped()):
+			instance = bullet.instantiate()
+			instance.position = bullet_out_here.global_position
+			instance.transform.basis = gun_direction.global_transform.basis
+			get_parent().add_child(instance)
+			shoot_cd.start()
 
 	move_and_slide()
+	
+	# get collision
+	var a = cameraRay.get_collision_point()
+	
+	var gunvector = gun_direction.global_position - a
+	
+	if cameraRay.is_colliding() and aim_adjust:
+		gun_direction.look_at(a, Vector3(0,-1,0))
+	else:
+		gun_direction.look_at(distantTarget.global_position, Vector3(0,-1,0))
+
+	
+	

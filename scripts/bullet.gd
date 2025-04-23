@@ -13,3 +13,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	position += transform.basis * Vector3(0, 0, -SPEED) * delta
+	if (ray_cast_3d.get_collider()):
+		var collider = ray_cast_3d.get_collider()
+		if collider.is_in_group("destructible"):
+			collider.health -= 1
+		queue_free()
