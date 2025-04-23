@@ -1,8 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://ducp0rx0t5sx"]
+[gd_scene load_steps=9 format=3 uid="uid://ducp0rx0t5sx"]
 
 [ext_resource type="PackedScene" uid="uid://s7ck66806sfg" path="res://scenes/player.tscn" id="1_lrgi8"]
 
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_5tgy4"]
+
+[sub_resource type="Sky" id="Sky_4urgy"]
+sky_material = SubResource("PhysicalSkyMaterial_5tgy4")
+
 [sub_resource type="Environment" id="Environment_45f3d"]
+background_color = Color(0.121569, 0.168627, 0.564706, 1)
+sky = SubResource("Sky_4urgy")
 glow_enabled = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_jg204"]
@@ -19,10 +26,10 @@ points = PackedVector3Array(25.3919, 0.396748, 25.3919, -25.3919, -0.396748, -25
 [node name="game" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.0174524, 0.999848, 0, -0.999848, 0.0174524, 0, 11.9673, 0)
-light_energy = 1.242
-light_indirect_energy = 1.889
-shadow_enabled = true
+transform = Transform3D(0.99669, 0.00141879, 0.0812825, -0.0684457, 0.554128, 0.829613, -0.0438638, -0.832431, 0.552391, 0, 9.78517, 12.292)
+light_color = Color(1, 0.988235, 0.913725, 1)
+light_energy = 1.5
+light_angular_distance = 49.09
 sky_mode = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -46,5 +53,5 @@ mesh = SubResource("PlaneMesh_28571")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_ev0t2")
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_lrgi8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.15274, 2.30595)
+[node name="player" parent="." instance=ExtResource("1_lrgi8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23244, 2.62753)

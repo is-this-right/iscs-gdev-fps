@@ -3,13 +3,57 @@ extends CharacterBody3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
+@onready var pivot: Node3D = $CameraController
 
+@export var TILT_LOWER_LIMIT := deg_to_rad(-90.0)
+@export var TILT_UPPER_LIMIT := deg_to_rad (90.0)
+@export var CAMERA_CONTROLLER : Camera3D
+@export var sensitivity = 0.5
+
+var _mouse_input : bool = true
+var _rotation_input : float
+var _tilt_input : float
+var _mouse_rotation : Vector3
+
+func _input(event):
+	if event.is_action_pressed("exit"):
+		get_tree().quit()	
+		
+func _ready():
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+func _unhandled_input(event: InputEvent):
+	_mouse_input = event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
+	#_mouse_input = event is InputEventAction and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
+	#if event is InputEventMouseMotion:
+	if _mouse_input:
+		rotate_y(deg_to_rad(-event.relative.x * sensitivity))
+		pivot.rotate_x(deg_to_rad(-event.relative. y * sensitivity))
+		pivot.rotation.x = clamp (pivot.rotation.x, deg_to_rad(-90), deg_to_rad(45))
+	#if _mouse_input:
+		#_rotation_input = -event.relative.x
+		#_tilt_input = -event.relative.y
+	#print(Vector2(_rotation_input, _tilt_input))
+	
+func _update_camera (delta) :
+	# Rotate camera using euler rotation
+	_mouse_rotation.x += _tilt_input * delta
+	_mouse_rotation.x = clamp(_mouse_rotation.x, TILT_LOWER_LIMIT, TILT_UPPER_LIMIT)
+	_mouse_rotation.y += _rotation_input * delta
+	
+	CAMERA_CONTROLLER.transform.basis = Basis.from_euler(_mouse_rotation)
+	CAMERA_CONTROLLER.rotation.z = 0.0
+	
+	_rotation_input = 0.0
+	_tilt_input = 0.0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+	
+	_update_camera(delta)
+	
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
