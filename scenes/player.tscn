@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://s7ck66806sfg"]
+[gd_scene load_steps=7 format=3 uid="uid://s7ck66806sfg"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_ghv6b"]
+[ext_resource type="Script" uid="uid://doqx35t6upruw" path="res://scripts/player.gd" id="1_ghv6b"]
+[ext_resource type="Texture2D" uid="uid://05cxo1sxgwoe" path="res://assets/cocacola.jpg" id="2_g2els"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qhqgy"]
+albedo_texture = ExtResource("2_g2els")
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3vyb7"]
 
@@ -15,6 +19,7 @@ script = ExtResource("1_ghv6b")
 CAMERA_CONTROLLER = NodePath("CameraController/over_the_shoulder")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_qhqgy")
 mesh = SubResource("CapsuleMesh_3vyb7")
 skeleton = NodePath("../CollisionShape3D")
 
@@ -27,11 +32,11 @@ shape = SubResource("BoxShape3D_g2els")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.41472, 0.752818, 2.28557)
 
 [node name="RayCast3D" type="RayCast3D" parent="CameraController/over_the_shoulder"]
-transform = Transform3D(1.91069e-15, 4.37114e-06, 1, 1, -4.37114e-06, 0, 4.37114e-08, 100, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(3.82138e-15, 8.74228e-06, 2, 2, -8.74228e-06, -6.88919e-21, 8.74228e-08, 200, -8.74228e-08, 0, 0, 0)
 hit_back_faces = false
 
 [node name="pointHereInstead" type="Marker3D" parent="CameraController/over_the_shoulder"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -100.291)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -200.705)
 
 [node name="top" type="Camera3D" parent="CameraController"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 4.18949, 0)
@@ -44,7 +49,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.388578)
 mesh = SubResource("BoxMesh_fx43c")
 
 [node name="RayCast3D" type="RayCast3D" parent="Gun pivot"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-06, -1, 0, 100, -4.37114e-08, 0, 0, -0.516487)
+transform = Transform3D(2, 0, 0, 0, -8.74228e-06, -2, 0, 200, -8.74228e-08, 0, 0, -0.516487)
 
 [node name="bulletHere" type="Marker3D" parent="Gun pivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.906678)

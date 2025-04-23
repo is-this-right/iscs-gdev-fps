@@ -8,8 +8,8 @@ const JUMP_VELOCITY = 4.5
 
 
 
-@export var TILT_LOWER_LIMIT := deg_to_rad(-90.0)
-@export var TILT_UPPER_LIMIT := deg_to_rad (90.0)
+@export var TILT_LOWER_LIMIT := deg_to_rad(-120.0)
+@export var TILT_UPPER_LIMIT := deg_to_rad (120.0)
 @export var CAMERA_CONTROLLER : Camera3D
 @export var sensitivity = 0.5
 @onready var gun_direction = $"Gun pivot"

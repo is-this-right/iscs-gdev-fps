@@ -1,4 +1,6 @@
-res://scenes/bullet.tscn
+res://scenes/map.tscn
 res://scenes/game.tscn
 res://scenes/player.tscn
+res://scripts/box.gd
+res://scenes/box.tscn
 res://scripts/player.gd

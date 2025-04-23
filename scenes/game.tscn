@@ -1,35 +1,25 @@
-[gd_scene load_steps=12 format=3 uid="uid://ducp0rx0t5sx"]
+[gd_scene load_steps=8 format=3 uid="uid://ducp0rx0t5sx"]
 
+[ext_resource type="Texture2D" uid="uid://bw8eptq0a5ubt" path="res://assets/scattered-clouds-blue-sky.jpg" id="1_iywne"]
 [ext_resource type="PackedScene" uid="uid://s7ck66806sfg" path="res://scenes/player.tscn" id="1_lrgi8"]
 [ext_resource type="Texture2D" uid="uid://dibod4ohnuix2" path="res://assets/circle-01.png" id="1_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://c2v4obwd6qajf" path="res://scenes/box.tscn" id="2_h3uoi"]
+[ext_resource type="PackedScene" uid="uid://dwpcecq4vm74b" path="res://scenes/map.tscn" id="4_lbhrr"]
 
-[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_5tgy4"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_p57ef"]
+panorama = ExtResource("1_iywne")
 
-[sub_resource type="Sky" id="Sky_4urgy"]
-sky_material = SubResource("PhysicalSkyMaterial_5tgy4")
+[sub_resource type="Sky" id="Sky_blm8a"]
+sky_material = SubResource("PanoramaSkyMaterial_p57ef")
 
-[sub_resource type="Environment" id="Environment_45f3d"]
-background_color = Color(0.121569, 0.168627, 0.564706, 1)
-sky = SubResource("Sky_4urgy")
-glow_enabled = true
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_28571"]
-size = Vector2(50, 50)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ev0t2"]
-points = PackedVector3Array(25.3919, 0.396748, 25.3919, -25.3919, -0.396748, -25.3919, -25.3919, 0.396748, -25.3919, 25.3919, -0.396748, -25.3919, -25.3919, -0.396748, 25.3919, -25.3919, 0.396748, 25.3919, 25.3919, 0.396748, -25.3919, 25.3919, -0.396748, 25.3919)
-
-[sub_resource type="BoxMesh" id="BoxMesh_p3gqg"]
-size = Vector3(10, 10, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yq1ni"]
-albedo_color = Color(0, 0, 1, 1)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jboae"]
-points = PackedVector3Array(-5.07837, -5.07738, -0.579365, 4.78818, 4.78724, 0.5, 4.78818, -4.78724, 0.5, 5.07837, 5.07738, -0.579365, -4.78818, 4.78724, 0.5, 5.07837, -5.07738, -0.579365, -5.07837, 5.07738, -0.579365, -4.78818, -4.78724, 0.5)
+[sub_resource type="Environment" id="Environment_u5sy4"]
+background_mode = 2
+sky = SubResource("Sky_blm8a")
+tonemap_mode = 2
 
 [node name="game" type="Node3D"]
+
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_u5sy4")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -42,43 +32,8 @@ position = Vector2(576, 320)
 scale = Vector2(0.492, 0.492)
 texture = ExtResource("1_yqjtg")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.99669, 0.00141879, 0.0812825, -0.0684457, 0.554128, 0.829613, -0.0438638, -0.832431, 0.552391, 0, 9.78517, 12.292)
-light_color = Color(1, 0.988235, 0.913725, 1)
-light_energy = 1.5
-light_angular_distance = 49.09
-sky_mode = 1
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_45f3d")
-
-[node name="box2" parent="." instance=ExtResource("2_h3uoi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.20519, 0.985037, 0)
-
-[node name="Floor" type="MeshInstance3D" parent="."]
-mesh = SubResource("PlaneMesh_28571")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_ev0t2")
-
-[node name="Wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.11646, 4.98868, 9.0278)
-mesh = SubResource("BoxMesh_p3gqg")
-skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_yq1ni")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Wall"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_jboae")
+[node name="map" parent="." instance=ExtResource("4_lbhrr")]
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_lrgi8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0531, 5.24609)
-
-[node name="box" parent="." instance=ExtResource("2_h3uoi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.447404, 0.954852, -0.159011)
-
-[node name="box3" parent="." instance=ExtResource("2_h3uoi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.42039, 0.969818, -0.20915)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.01552, 5.09925, -2.61762)
+collision_layer = 3

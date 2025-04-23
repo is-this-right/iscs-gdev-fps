@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cs38bl3g1hj1e"
+path="res://.godot/imported/Low-Poly-Racing-Car.obj-cd9c1cd0becf24eda89fc72c10378601.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Low-Poly-Racing-Car.obj-cd9c1cd0becf24eda89fc72c10378601.mesh"]
+
+source_file="res://assets/Low-Poly-Racing-Car.obj"
+dest_files=["res://.godot/imported/Low-Poly-Racing-Car.obj-cd9c1cd0becf24eda89fc72c10378601.mesh", "res://.godot/imported/Low-Poly-Racing-Car.obj-cd9c1cd0becf24eda89fc72c10378601.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,3 +1,8 @@
+CollisionShape3D
+StaticBody3D
+CollisionPolygon3D
+DirectionalLight3D
+MeshInstance3D
 Marker3D
 Control
 Container

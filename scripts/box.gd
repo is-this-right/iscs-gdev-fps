@@ -1,6 +1,6 @@
 extends StaticBody3D
 
-var health = 3
+var health = 5
 
 
 # Called when the node enters the scene tree for the first time.
