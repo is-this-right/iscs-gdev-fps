@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://ducp0rx0t5sx"]
+[gd_scene load_steps=13 format=3 uid="uid://ducp0rx0t5sx"]
 
 [ext_resource type="PackedScene" uid="uid://s7ck66806sfg" path="res://scenes/player.tscn" id="1_lrgi8"]
+[ext_resource type="Texture2D" uid="uid://dibod4ohnuix2" path="res://assets/circle-01.png" id="1_yqjtg"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_5tgy4"]
 
@@ -33,6 +34,17 @@ albedo_color = Color(0, 0, 1, 1)
 points = PackedVector3Array(-5.07837, -5.07738, -0.579365, 4.78818, 4.78724, 0.5, 4.78818, -4.78724, 0.5, 5.07837, 5.07738, -0.579365, -4.78818, 4.78724, 0.5, 5.07837, -5.07738, -0.579365, -5.07837, 5.07738, -0.579365, -4.78818, -4.78724, 0.5)
 
 [node name="game" type="Node3D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+position = Vector2(576, 320)
+scale = Vector2(0.492, 0.492)
+texture = ExtResource("1_yqjtg")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.99669, 0.00141879, 0.0812825, -0.0684457, 0.554128, 0.829613, -0.0438638, -0.832431, 0.552391, 0, 9.78517, 12.292)
