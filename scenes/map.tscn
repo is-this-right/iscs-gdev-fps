@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dwpcecq4vm74b"]
+[gd_scene load_steps=48 format=3 uid="uid://dwpcecq4vm74b"]
 
 [ext_resource type="Texture2D" uid="uid://3pxqfb2yonfy" path="res://assets/Texturelabs_Concrete_149M.jpg" id="1_4xfga"]
 [ext_resource type="ArrayMesh" uid="uid://x76tauqkpa5o" path="res://assets/obj/Residential Buildings 001.obj" id="2_2klcf"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://c13s1l0wxbams" path="res://scripts/box.gd" id="6_be0no"]
 [ext_resource type="ArrayMesh" uid="uid://b7m1qcsjhe4o1" path="res://assets/Chevrolet_Camaro_SS_Low.obj" id="6_nakos"]
 [ext_resource type="ArrayMesh" uid="uid://bthtrldfuyots" path="res://assets/uploads_files_2792345_Koenigsegg.obj" id="7_jh32y"]
+[ext_resource type="Texture2D" uid="uid://bb32eg0j73bi" path="res://assets/bigger.png" id="8_blm8a"]
 [ext_resource type="ArrayMesh" uid="uid://f8o2fu3mg8o1" path="res://assets/PG2.79.obj" id="8_jh32y"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xfga"]
@@ -65,6 +66,129 @@ height = 11.4085
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_be0no"]
 height = 3.93115
 radius = 1.61133
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2ln5"]
+atlas = ExtResource("8_blm8a")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_telwu"]
+atlas = ExtResource("8_blm8a")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brpd5"]
+atlas = ExtResource("8_blm8a")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ry43h"]
+atlas = ExtResource("8_blm8a")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dijgj"]
+atlas = ExtResource("8_blm8a")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_faous"]
+atlas = ExtResource("8_blm8a")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wavyb"]
+atlas = ExtResource("8_blm8a")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igdtg"]
+atlas = ExtResource("8_blm8a")
+region = Rect2(384, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anxlp"]
+atlas = ExtResource("8_blm8a")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yches"]
+atlas = ExtResource("8_blm8a")
+region = Rect2(128, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6rpn"]
+atlas = ExtResource("8_blm8a")
+region = Rect2(256, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gu2bm"]
+atlas = ExtResource("8_blm8a")
+region = Rect2(384, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8w8a"]
+atlas = ExtResource("8_blm8a")
+region = Rect2(0, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ym20b"]
+atlas = ExtResource("8_blm8a")
+region = Rect2(128, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oukka"]
+atlas = ExtResource("8_blm8a")
+region = Rect2(256, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmnjw"]
+atlas = ExtResource("8_blm8a")
+region = Rect2(384, 384, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mlgqr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2ln5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_telwu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brpd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ry43h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dijgj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_faous")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wavyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igdtg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anxlp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yches")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6rpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gu2bm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8w8a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym20b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oukka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmnjw")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_be0no"]
 radius = 2.49912
@@ -169,7 +293,7 @@ shape = SubResource("BoxShape3D_m335s")
 [node name="camaro" type="StaticBody3D" parent="." groups=["box", "destructible"]]
 script = ExtResource("6_be0no")
 
-[node name="ChevroletCamaroSsLow" type="MeshInstance3D" parent="camaro"]
+[node name="car_body" type="MeshInstance3D" parent="camaro"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6146, 1.67249, 17.447)
 mesh = ExtResource("6_nakos")
 skeleton = NodePath("../..")
@@ -182,10 +306,22 @@ shape = SubResource("CapsuleShape3D_jh32y")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 16.7608, 1.66133, 17.24)
 shape = SubResource("CylinderShape3D_be0no")
 
+[node name="big_explosion" type="AnimatedSprite3D" parent="camaro"]
+transform = Transform3D(5.04311, 0, 0, 0, 4.40189, 0, 0, 0, 1, 17.0155, 2.13758, 17.2074)
+sprite_frames = SubResource("SpriteFrames_mlgqr")
+frame = 16
+frame_progress = 1.0
+
+[node name="big_explosion2" type="AnimatedSprite3D" parent="camaro"]
+transform = Transform3D(-2.20441e-07, 0, 1, 0, 4.40189, 0, -5.04311, 0, -4.37114e-08, 17.0155, 2.13758, 17.2074)
+sprite_frames = SubResource("SpriteFrames_mlgqr")
+frame = 16
+frame_progress = 1.0
+
 [node name="keonigseg" type="StaticBody3D" parent="." groups=["box", "destructible"]]
 script = ExtResource("6_be0no")
 
-[node name="koenigseg" type="MeshInstance3D" parent="keonigseg"]
+[node name="car_body" type="MeshInstance3D" parent="keonigseg"]
 transform = Transform3D(0.275, 0, 0, 0, 0.275, 0, 0, 0, 0.275, 22.8072, 0, 17.7452)
 mesh = ExtResource("7_jh32y")
 skeleton = NodePath("../..")
@@ -194,10 +330,22 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -0.409223, 0, 1, -1.78877e-08, 22.7995, 1.17429, 17.7245)
 shape = SubResource("CapsuleShape3D_be0no")
 
+[node name="big_explosion" type="AnimatedSprite3D" parent="keonigseg"]
+transform = Transform3D(3.01401, 0, 0, 0, 3.10517, 0, 0, 0, 1, 22.6331, 2.10121, 17.2074)
+sprite_frames = SubResource("SpriteFrames_mlgqr")
+frame = 16
+frame_progress = 1.0
+
+[node name="big_explosion2" type="AnimatedSprite3D" parent="keonigseg"]
+transform = Transform3D(-1.93849e-07, 0, 1, 0, 3.10517, 0, -4.43475, 0, -4.37114e-08, 22.6331, 2.10121, 17.2074)
+sprite_frames = SubResource("SpriteFrames_mlgqr")
+frame = 16
+frame_progress = 1.0
+
 [node name="pg2" type="StaticBody3D" parent="." groups=["box", "destructible"]]
 script = ExtResource("6_be0no")
 
-[node name="Pg2_79" type="MeshInstance3D" parent="pg2"]
+[node name="car_body" type="MeshInstance3D" parent="pg2"]
 transform = Transform3D(0.475, 0, 0, 0, 0.475, 0, 0, 0, 0.475, 28.9443, 1.44596, 19.4772)
 mesh = ExtResource("8_jh32y")
 skeleton = NodePath("../..")
@@ -205,3 +353,22 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pg2"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -0.672448, 0, 1, -2.93936e-08, 28.877, 0.416575, 18.18)
 shape = SubResource("CapsuleShape3D_blm8a")
+
+[node name="big_explosion" type="AnimatedSprite3D" parent="pg2"]
+transform = Transform3D(2.70396, 0, 0, 0, 2.40219, 0, 0, 0, 1, 29.0598, 1.85975, 17.2074)
+sprite_frames = SubResource("SpriteFrames_mlgqr")
+frame = 16
+frame_progress = 1.0
+
+[node name="big_explosion2" type="AnimatedSprite3D" parent="pg2"]
+transform = Transform3D(-2.47201e-07, 0, -1, 0, 2.40219, 0, 5.65531, 0, -4.37114e-08, 29.0598, 1.85975, 17.2074)
+sprite_frames = SubResource("SpriteFrames_mlgqr")
+frame = 16
+frame_progress = 1.0
+
+[connection signal="animation_finished" from="camaro/big_explosion" to="camaro" method="_on_big_explosion_animation_finished"]
+[connection signal="animation_finished" from="camaro/big_explosion2" to="camaro" method="_on_big_explosion_animation_finished"]
+[connection signal="animation_finished" from="keonigseg/big_explosion" to="keonigseg" method="_on_big_explosion_animation_finished"]
+[connection signal="animation_finished" from="keonigseg/big_explosion2" to="keonigseg" method="_on_big_explosion_animation_finished"]
+[connection signal="animation_finished" from="pg2/big_explosion" to="pg2" method="_on_big_explosion_animation_finished"]
+[connection signal="animation_finished" from="pg2/big_explosion2" to="pg2" method="_on_big_explosion_animation_finished"]

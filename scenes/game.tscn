@@ -186,11 +186,24 @@ position = Vector2(576, 320)
 scale = Vector2(0.492, 0.492)
 texture = ExtResource("1_yqjtg")
 
+[node name="TextEdit" type="TextEdit" parent="Control"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 173.0
+offset_bottom = 120.0
+text = "Esc - quit game
+C - change cam
+T - change aim
+\\ - free/lock mouse"
+editable = false
+
 [node name="map" parent="." instance=ExtResource("4_lbhrr")]
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_lrgi8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.01552, 5.09925, -2.61762)
 collision_layer = 3
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+[node name="mini_explosion" type="AnimatedSprite3D" parent="."]
 sprite_frames = SubResource("SpriteFrames_p57ef")
+frame = 20
+frame_progress = 1.0

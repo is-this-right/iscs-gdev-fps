@@ -19,7 +19,7 @@ const JUMP_VELOCITY = 4.5
 @onready var top: Camera3D = $CameraController/top
 @onready var bullet_out_here = $"Gun pivot/bulletHere"
 @onready var shoot_cd: Timer = $shoot_cd
-@onready var explosion_effect_bullet = $"../AnimatedSprite3D"
+@onready var explosion_effect_bullet = $"../mini_explosion"
 
 
 var _mouse_input : bool = true
