@@ -12,7 +12,8 @@ const JUMP_VELOCITY = 4.5
 @export var TILT_UPPER_LIMIT := deg_to_rad (90.0)
 @export var CAMERA_CONTROLLER : Camera3D
 @export var sensitivity = 0.5
-@onready var gun_direction = $"Gun pivot/RayCast3D"
+@onready var gun_direction = $"Gun pivot"
+@onready var cameraRay = $CameraController/Camera3D/RayCast3D
 
 var _mouse_input : bool = true
 var _rotation_input : float
@@ -90,3 +91,16 @@ func _physics_process(delta: float) -> void:
 		get_parent().add_child(instance)
 
 	move_and_slide()
+	
+	# get collision
+	var a = cameraRay.get_collision_point()
+	
+	var gunvector = gun_direction.global_position - a
+	
+	if cameraRay.is_colliding():
+		gun_direction.look_at(a, Vector3(0,-1,0))
+	else:
+		gun_direction.set_rotation(Vector3(0,0,0))
+
+	
+	
