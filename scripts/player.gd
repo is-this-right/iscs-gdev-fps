@@ -14,6 +14,7 @@ const JUMP_VELOCITY = 4.5
 @export var sensitivity = 0.5
 @onready var gun_direction = $"Gun pivot"
 @onready var cameraRay = $CameraController/Camera3D/RayCast3D
+@onready var distantTarget = $CameraController/Camera3D/pointHereInstead
 
 var _mouse_input : bool = true
 var _rotation_input : float
@@ -100,7 +101,7 @@ func _physics_process(delta: float) -> void:
 	if cameraRay.is_colliding():
 		gun_direction.look_at(a, Vector3(0,-1,0))
 	else:
-		gun_direction.set_rotation(Vector3(0,0,0))
+		gun_direction.look_at(distantTarget.global_position, Vector3(0,-1,0))
 
 	
 	
