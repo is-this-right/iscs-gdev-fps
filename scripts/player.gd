@@ -4,6 +4,9 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 @onready var pivot: Node3D = $CameraController
+@onready var camera_ray: RayCast3D = $CameraController/Camera3D/RayCast3D
+
+
 
 @export var TILT_LOWER_LIMIT := deg_to_rad(-90.0)
 @export var TILT_UPPER_LIMIT := deg_to_rad (90.0)
@@ -27,6 +30,11 @@ func _input(event):
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		else:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	if event.is_action_pressed("toggle_camera_ray"):
+		if camera_ray.visible == true:
+			camera_ray.visible = false
+		else:
+			camera_ray.visible = true
 		
 		
 func _ready():
