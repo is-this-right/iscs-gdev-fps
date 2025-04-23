@@ -1,7 +1,6 @@
-[gd_scene load_steps=26 format=3 uid="uid://bgcupm0u1d7ts"]
+[gd_scene load_steps=4 format=3 uid="uid://bgcupm0u1d7ts"]
 
 [ext_resource type="Script" uid="uid://881nani4rn63" path="res://scripts/bullet.gd" id="1_6wn7q"]
-[ext_resource type="Texture2D" uid="uid://dyvwugdjgdj3b" path="res://assets/pngegg.png" id="2_y25gk"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_mrtc7"]
 size = Vector3(0.1, 0.1, 0.5)
@@ -12,157 +11,6 @@ emission_enabled = true
 emission = Color(0, 1, 0, 1)
 emission_energy_multiplier = 5.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l5glv"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eoqba"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qncy5"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(384, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tamys"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(576, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_26lx3"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(768, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1cfmv"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(0, 192, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k76ql"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(192, 192, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_in4mv"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(384, 192, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s437g"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(576, 192, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iqq7w"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(768, 192, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6umxm"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(0, 384, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0apvr"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(192, 384, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ba0j3"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(384, 384, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lurao"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(576, 384, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bssuu"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(768, 384, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2o84m"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(0, 576, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r8x4c"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(192, 576, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kuao1"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(384, 576, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_53tey"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(576, 576, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dtvgj"]
-atlas = ExtResource("2_y25gk")
-region = Rect2(768, 576, 192, 192)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_eb1au"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l5glv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eoqba")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qncy5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tamys")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_26lx3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1cfmv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k76ql")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_in4mv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s437g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iqq7w")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6umxm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0apvr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ba0j3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lurao")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bssuu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2o84m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r8x4c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kuao1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_53tey")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dtvgj")
-}],
-"loop": false,
-"name": &"default",
-"speed": 10.0
-}]
-
 [node name="Bullet" type="Node3D"]
 script = ExtResource("1_6wn7q")
 
@@ -172,8 +20,3 @@ surface_material_override/0 = SubResource("StandardMaterial3D_fsa3l")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 target_position = Vector3(0, 0, -0.5)
-
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-sprite_frames = SubResource("SpriteFrames_eb1au")
-
-[connection signal="animation_finished" from="AnimatedSprite3D" to="." method="_on_animated_sprite_3d_animation_finished"]

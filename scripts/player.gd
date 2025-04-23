@@ -19,6 +19,8 @@ const JUMP_VELOCITY = 4.5
 @onready var top: Camera3D = $CameraController/top
 @onready var bullet_out_here = $"Gun pivot/bulletHere"
 @onready var shoot_cd: Timer = $shoot_cd
+@onready var explosion_effect_bullet = $"../AnimatedSprite3D"
+
 
 var _mouse_input : bool = true
 var _rotation_input : float
@@ -104,6 +106,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("shoot"):
 		if (shoot_cd.is_stopped()):
 			instance = bullet.instantiate()
+			instance.makeExplosion.connect(summon_explosion)
 			instance.position = bullet_out_here.global_position
 			instance.transform.basis = gun_direction.global_transform.basis
 			get_parent().add_child(instance)
@@ -120,6 +123,14 @@ func _physics_process(delta: float) -> void:
 		gun_direction.look_at(a, Vector3(0,-1,0))
 	else:
 		gun_direction.look_at(distantTarget.global_position, Vector3(0,-1,0))
+		
+func summon_explosion(pos, dir):
+	var bb = explosion_effect_bullet.duplicate()
+	bb.global_position = pos
+	bb.set_rotation(dir)
+	bb.play()
+	get_parent().add_child(bb)
+	pass
 
 	
 	
